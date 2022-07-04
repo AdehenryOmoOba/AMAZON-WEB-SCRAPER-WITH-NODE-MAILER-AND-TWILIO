@@ -50,7 +50,7 @@ async function scrape() {
         body: `The price of ${product.name} is currently below ${product.price}.00 US dollars. Purchase now at ${product.link}`,
         messagingServiceSid: "MGf45127a767dd26b397fdbfe1bce19dc6",
         from: "+17069488647",
-        to: "+2348030821679",
+        to: process.env.MY_TELEPHONE,
       })
       .then((message) => console.log(message.sid))
       .done();
